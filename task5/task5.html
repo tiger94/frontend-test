@@ -1,0 +1,413 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>这是网站的标题</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: aliceblue;
+      min-width: 700px;
+    }
+
+    header {
+      width: 100%;
+      height: 60px;
+      background-color: #999999;
+    }
+
+    header .logo img {
+      margin-left: 20px;
+      margin-top: 6px;
+      height: 50px;
+      width: 120px;
+    }
+
+    .logo {
+      float: left;
+    }
+
+    .nav {
+      float: right;
+      font-size: 12px;
+      line-height: 60px;
+    }
+
+    .nav li {
+      float: left;
+      margin-left: 15px;
+      margin-right: 20px;
+    }
+
+    .nav li a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .firstArticle,
+    .secondArtcle,
+    .Photo,
+    .LastArtcile,
+    aside {
+      background-color: #FFFFFF;
+      margin: 22px;
+      padding: 20px;
+      box-shadow: 2px 2px 1px 1px #cccccc;
+    }
+
+    .firstArticle,
+    .secondArtcle,
+    .Photo,
+    .LastArtcile {
+      margin: 22px 390px 22px 22px;
+    }
+
+    .firstArticle_Article {
+      text-indent: 2em;
+    }
+
+    .secondArtcle_Nav li {
+      list-style: none;
+      margin-bottom: 4px;
+    }
+
+    .Photo {
+      overflow: auto;
+    }
+
+    .ImgBox {
+      float: left;
+      border: 1px solid #CCCCCC;
+      width: 130px;
+      height: 130px;
+      padding: 6px;
+      text-align: center;
+      font-size: 12px;
+      margin-left: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .ImgBox p {
+      margin-bottom: 5px;
+    }
+
+    .ImgBox img {
+      width: 120px;
+      height: 106px;
+    }
+
+    .paihangbang {
+      font-weight: bold;
+      margin-left: 50px;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid #CCCCCC;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .LastArtcile table {
+      width: 100%;
+    }
+
+    .LastArtcile th {
+      background-color: #000000;
+      color: #FFFFFF;
+    }
+
+    tr:last-child {
+      background-color: darkgray;
+    }
+
+    aside {
+      float: right;
+      width: 300px;
+    }
+
+    aside h2 {
+      border-left: 6px solid #A9A9A9;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: block;
+      font-size: 14px;
+    }
+
+    .Error {
+      color: #A9A9A9;
+      margin-top: -10px;
+    }
+
+    .Emil {
+
+    }
+
+    .PassWord {
+    }
+
+    .PassWordAgain {
+    }
+
+    .Sex {
+      margin-bottom: 10px;
+    }
+
+    .City {
+      margin-bottom: 10px;
+    }
+
+    .Like {
+      margin-bottom: 10px;
+    }
+
+    .Idea {
+
+      margin-bottom: 10px;
+    }
+
+    #Sub {
+      width: 100%;
+      height: 40px;
+      background-color: blue;
+      border: none;
+      border-radius: 10px;
+      color: #FFFFFF;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    footer {
+      width: 100%;
+      height: 50px;
+      background-color: #000000;
+      text-align: center;
+      color: #FFFFFF;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1 class="logo"><img src="t1.jpg"/></h1>
+  <ul class="nav">
+    <li><a href="http://www.baidu.com">导航链接一</a></li>
+    <li><a href="http://www.baidu.com">导航链接二</a></li>
+    <li><a href="http://www.baidu.com">导航链接三</a></li>
+    <li><a href="http://www.baidu.com">导航链接四</a></li>
+  </ul>
+</header>
+<aside>
+  <h1>这里现在是侧栏了！</h1>
+  <form action="" method="post">
+    <table>
+      <tr>
+        <td><label>请输入邮箱地址：</label></td>
+        <td><input type="text" placeholder="这是一个文本输入框"></td>
+      </tr>
+      <tr>
+        <td><span>&nbsp; &nbsp;邮箱地址请按要求格式输入 </span></td>
+      </tr>
+      <tr>
+        <td><label>请输入密码：</label></td>
+        <td><input type="text" placeholder="这是一个文本输入框"></td>
+      </tr>
+      <tr>
+        <td><label>请重复输入密码：</label></td>
+        <td><input type="text" placeholder="这是一个文本输入框"></td>
+      </tr>
+      <tr>
+        <td><span>密码请为6-16位英文数字</span></td>
+      </tr>
+      <tr>
+        <td>
+          <lable>性别：</lable>
+        </td>
+        <td>
+          <input type="radio" name="sex">男</input>
+          <input type="radio" name="sex">女</input>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <lable>城市：</lable>
+        </td>
+        <td>
+          <select name="" id="">
+            <option value="">北京</option>
+            <option value="">武汉</option>
+            <option value="">济南</option>
+          </select>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <lable>爱好：</lable>
+        </td>
+        <td>
+          <input type="checkbox">运动 </input>
+          <input type="checkbox">艺术 </input>
+          <input type="checkbox">科学 </input>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <lable>个人描述：</lable>
+        </td>
+        <td>
+          <textarea cols="20" rows="5" placeholder="这是一个多行输入框，输入你的个人描述。"></textarea>
+        </td>
+      </tr>
+    </table>
+    <input type="submit" id="Sub" value="确认提交">
+  </form>
+</aside>
+<article class="firstArticle">
+  <div>
+    <h1>文章一级标题</h1>
+  </div>
+  <div>
+    <h2 class="import">文章二级标题</h2>
+  </div>
+  <div>
+    文章作者 &nbsp;发布时间
+    <p class="firstArticle_Article">这是一个很短的段落，但是也要换行了</p>
+    <p class="firstArticle_Article">这是第二段了，还是不长</p>
+    <p class="firstArticle_Article">好了第三段，价格链接吧<a href="http://www.baidu.com/">我是链接</a>，嗯，没了</p>
+  </div>
+  <div>
+    <p class="firstArticle_Article">好看的图片</p>
+    <img src="t1.jpg" width="500" height="250">
+  </div>
+  <div>
+    <p class="firstArticle_Article">不好意思，忘了一段粗体，，，，啊啊啊，很尴尬呢<b>对，没错，这里是粗体了，有没有感觉强无敌？？？</b>一直都很短好像也不行，这次试试看自动换行吧字数够了吧卡就是打卡时间点卡了居民按时间大马克鲁塞德马利克萨达姆德拉科是你的撒大家爱看圣诞节哦啊放假库拉索
+    </p>
+  </div>
+</article>
+<article class="secondArtcle">
+  <div>
+    <h1>这是另一篇文章的一级标题</h1>
+  </div>
+  <div>
+    <h2 class="import">这是另一篇文章的二级标题</h2>
+  </div>
+  <div>
+    文章作者 &nbsp; 时间
+    <p>重复说的我就不来了此处省略若干字</p>
+  </div>
+  <div>
+    <p>还是那个好看的图片</p>
+    <img src="t1.jpg" width="500" height="250">
+  </div>
+  <div>
+    <h2>这是有序列表</h2>
+    <ol>
+      <li>项目 1</li>
+      <li>项目 2</li>
+      <li>项目 3</li>
+    </ol>
+  </div>
+</article>
+<article class="Photo">
+  <div>
+    <h1>很大的图片</h1>
+  </div>
+  <div class="ImgBox">
+    <p>好看的图片</p>
+    <img src="t1.jpg">
+  </div>
+  <div class="ImgBox">
+    <p>还是那个好看的图片</p>
+    <img src="t1.jpg">
+  </div>
+  <div class="ImgBox">
+    <p>还是那个好看的图片</p>
+    <img src="t1.jpg"></div>
+  <div class="ImgBox">
+    <p>还是那个好看的图片</p>
+    <img src="t1.jpg"></div>
+  <div class="ImgBox">
+    <p>好看的图片</p>
+    <img src="t1.jpg"></div>
+  <div class="ImgBox">
+    <p>还是那个好看的图片</p>
+    <img src="t1.jpg"></div>
+  <div class="ImgBox">
+    <p>还是那个好看的图片</p>
+    <img src="t1.jpg"></div>
+  <div class="ImgBox">
+    <p>还是那个好看的图片</p>
+    <img src="t1.jpg"></div>
+  <div class="ImgBox">
+    <p>还是那个好看的图片</p>
+    <img src="t1.jpg"></div>
+  <div class="ImgBox">
+    <p>还是那个好看的图片</p>
+    <img src="t1.jpg"></div>
+</article>
+<article class="LastArtcile">
+  <div>
+    <h1>最后一篇文章的一级标题</h1>
+  </div>
+  <div>
+    <h2>最后一篇文章的二级标题</h2>
+  </div>
+  <div>
+    <h3>文章作者 &nbsp;发布时间</h3>
+  </div>
+  <div>
+    <ol class="paihangbang">
+      <li>排名1</li>
+      <li>排名2</li>
+      <li>排名3</li>
+    </ol>
+  </div>
+
+  <p>来个表格，要求border="1"</p>
+
+  <table border="">
+
+    <tr>
+      <td>表头</td>
+      <td>表头</td>
+      <td>表头</td>
+    </tr>
+    <tr>
+      <td>表内容单元格</td>
+      <td>表内容单元格</td>
+      <td><a href="">操作？</a></td>
+    </tr>
+    <tr>
+      <td>表内容单元格</td>
+      <td>表内容单元格</td>
+      <td><a href="">操作？</a></td>
+    </tr>
+    <tr>
+      <td>表内容单元格</td>
+      <td>表内容单元格</td>
+      <td><a href="">操作？</a></td>
+    </tr>
+    <tr>
+      <td>总计</td>
+      <td colspan="2">1000</td>
+    </tr>
+  </table>
+</article>
+
+</div>
+</div>
+
+<div class="title">
+  <p>版权所有&copyFat Tiger
+  <p>
+</div>
+</body>
+</html>

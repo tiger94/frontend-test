@@ -115,14 +115,14 @@ function dell() {
     var fchild = outDivNode.firstChild;//获取第一个子元素
     var y = fchild.innerHTML;
     outDivNode.removeChild(fchild);//清除元素
-    alert("移除"+y+"?");
+    alert("确认删除"+y+"?");
 };
 function delr() {
     var outDivNode = document.getElementById("display");
     var lchild = outDivNode.lastChild;//获取最后一个子元素
     var y = lchild.innerHTML;
     outDivNode.removeChild(lchild);
-    alert("移除"+y+"?");
+    alert("确认删除"+y+"?");
 };
 function clickdel(divNode) {
     var pNode = divNode.parentNode;
@@ -141,7 +141,9 @@ function searchbtn() {
             if(reg.test(divContext)) {
                 f1DivNodes[i].innerHTML = divContext.fontcolor("red");
             }
+           
         }
+        
     }
     textNode.value = "";
 };

@@ -5,7 +5,7 @@ html,body{
 
 .container{
 	box-sizing: border-box;
-	border: 1px solid #999999;
+	border: 1px solid #999;
 	padding: 10px;
 }
 
@@ -17,8 +17,8 @@ html,body{
 
 .col{
 	box-sizing: border-box;
-	border: 1px solid #999999;
-	background-color: #EEEEEE;
+	border: 1px solid #999;
+	background-color: #eee;
 	height: 50px;
 	margin: 10px;
 	float: left;

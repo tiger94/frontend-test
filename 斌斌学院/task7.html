@@ -1,6 +1,5 @@
 <!DOCTYPE>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>task7</title>
@@ -50,7 +49,6 @@
 }
 </style>	
 </head>
-
 <body>
     <div id="wrapper">
         <div class="layer_1">
@@ -114,13 +112,12 @@ function postOrder(root) {
 
 function render() {
   if (inAnimation) {
-    alert('正在运行');
+    alert('正在运行，请稍后再试！');
     return;
   }
-
   inAnimation = true;
   var i = 0;
-  orderQueue[i].style.backgroundColor = 'blue';
+  orderQueue[i].style.backgroundColor = 'red';
   var showRet = setInterval(function() {
     i++;
     if (i >= orderQueue.length) {
@@ -130,7 +127,7 @@ function render() {
       return;
     }
     orderQueue[i - 1].style.backgroundColor = '#fff';
-    orderQueue[i].style.backgroundColor = 'blue';
+    orderQueue[i].style.backgroundColor = 'red';
   }, 500);
 }
 

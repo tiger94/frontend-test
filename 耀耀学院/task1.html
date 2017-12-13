@@ -39,20 +39,27 @@ var sum=0;
 			       sum=sum+2;
   		}
   	}
-  	if(sum>3 && sum<17)
+	if(sum=0)
+	{
+	form.email.focus();
+      label.style.color="#FF6666";
+  	 	label.innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;姓名不能为空"
+  	 	return false;
+	}
+  	else if(sum>3 && sum<17)
   	{
   		form.email.focus();
       label.style.color="#67BF7F";
   		label.innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格式正确"
   		return false;
   	}
-  else 
-  	 {
+    else 
+  	{
   	 	form.email.focus();
       label.style.color="#FF6666";
   	 	label.innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格式错误"
   	 	return false;
-  	 }
+  	}
 }
 </script>
 </head>

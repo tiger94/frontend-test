@@ -54,7 +54,7 @@
 		<input type="radio" name="student" id="not_student" value="非在校生" />非在校生
 	</div>
 	<div id="school_container">
-		<label for="city">学校</label>
+		<label for="city"></label>
 		<select id="city">
 			<option value="请选择" selected="">请选择</option>
 			<option value="北京">北京</option>
@@ -82,8 +82,8 @@
 		//创建一个对象来储存城市和学校
 		var schools = {
 			'请选择': ['请选择'],
-			'北京': ['北京大学', '清华大学'],
-			'武汉': ['武汉大学', '华中科技大学']
+			'北京': ['请选择','北京大学', '清华大学'],
+			'武汉': ['请选择','武汉大学', '华中科技大学']
 		};
 		//下拉列表二级联动
 		function changeSchool(city, school) {

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>听指令的小方块(一)</title>
@@ -11,6 +12,7 @@
 			margin: 40px auto;
 			border: 1px solid transparent;
 		}
+
 		#grids {
 			position: relative;
 			width: 500px;
@@ -18,6 +20,7 @@
 			margin: 20px;
 			border: 2px solid black;
 		}
+
 		.grid {
 			float: left;
 			box-sizing: border-box;
@@ -26,44 +29,55 @@
 			border: 1px solid #ccc;
 			border-width: 0 1px 1px 0;
 		}
+
 		#count_col {
 			position: absolute;
 			left: 40px;
 		}
+
 		#count_col div {
 			float: left;
 			width: 50px;
 		}
+
 		#count_row {
 			position: absolute;
 			top: 40px;
 		}
-		#count_row div{
+
+		#count_row div {
 			height: 50px;
 		}
+
 		#box_head {
 			background-color: rgb(7, 27, 247);
 			height: 15px;
 			width: 50px
 		}
+
 		#box_body {
 			background-color: rgb(245, 8, 8);
 			height: 35px;
 			width: 50px;
 		}
+
 		#control {
 			width: 540px;
 			margin: 0 auto;
 		}
-		#qiuck_check,#control_panel {
+
+		#qiuck_check,
+		#control_panel {
 			float: left;
 		}
+
 		#qiuck_check {
 			position: relative;
 			width: 200px;
 			height: 200px;
 			margin-left: 40px;
 		}
+
 		#qiuck_check p {
 			position: absolute;
 			background-color: #959393;
@@ -73,29 +87,34 @@
 			line-height: 35px;
 			cursor: pointer;
 		}
+
 		#toUp {
 			height: 40px;
 			width: 30px;
 			top: -20px;
 			left: 100px;
 		}
+
 		#toLeft {
 			height: 30px;
 			width: 40px;
 			top: 25px;
 			left: 55px;
 		}
+
 		#toGo {
 			width: 30px;
 			top: 25px;
 			left: 100px;
 		}
+
 		#toRight {
 			height: 30px;
 			width: 40px;
 			top: 25px;
 			left: 135px;
 		}
+
 		#toDown {
 			height: 40px;
 			width: 30px;
@@ -104,6 +123,7 @@
 		}
 	</style>
 </head>
+
 <body>
 	<div id="container">
 		<div id="count_col">
@@ -142,14 +162,14 @@
 		<div id="control_panel">
 			<input type="text" name="order" id="order">
 			<button id="doit">执行</button>
-			 <p>指令有：<br>
-			 GO：向蓝色边所面向的方向前进一格<br>
-	        TUN LEF：向左转（逆时针旋转90度）<br>
-	        TUN RIG：向右转（顺时针旋转90度）<br>
-	        TUN BAC：向右转（旋转180度）</p>
+			<p>指令有：
+				<br> GO：向蓝色边所面向的方向前进一格
+				<br> TUN LEF：向左转（逆时针旋转90度）
+				<br> TUN RIG：向右转（顺时针旋转90度）
+				<br> TUN BAC：向右转（旋转180度）</p>
 		</div>
 
-        <div id="qiuck_check">
+		<div id="qiuck_check">
 			<p id="toUp">↑</p>
 			<p id="toLeft">←</p>
 			<p id="toGo">GO</p>
@@ -160,125 +180,126 @@
 
 
 	<script>
-		var grids=document.getElementById("grids");
-		var box=document.getElementById("box");
-		var order=document.getElementById("order");
-		var doit=document.getElementById("doit");
-		var angle=0;//角度计数
-		var count=1;//计步
-		box.di=1;
+		var grids = document.getElementById("grids");
+		var box = document.getElementById("box");
+		var order = document.getElementById("order");
+		var doit = document.getElementById("doit");
+		var angle = 0;//角度计数
+		var count = 1;//计步
+		box.di = 1;
 		init();
 		qiuckControl();
 		//规定方向 1：上， 2：右 ，3：下， 4：左。di属性储存方向值,方向控制go命令的走法
 		//旋转   注意累计角度值即可
 		function turnLeft() {
-			if (box.di==1) {
-				box.di=4;
+			if (box.di == 1) {
+				box.di = 4;
 			}
 			else {
-				box.di=parseInt((box.di-1)%4);
+				box.di = parseInt((box.di - 1) % 4);
 			}
-			box.style.transform="rotate("+(angle-90)+"deg)";
-			angle-=90;
-			console.log("turnLeft:"+box.di);
+			box.style.transform = "rotate(" + (angle - 90) + "deg)";
+			angle -= 90;
+			console.log("turnLeft:" + box.di);
 		}
 		function turnRight() {
-			if (box.di==3) {
-				box.di=4;
+			if (box.di == 3) {
+				box.di = 4;
 			}
 			else {
-				box.di=parseInt((box.di+1)%4);
+				box.di = parseInt((box.di + 1) % 4);
 			}
-			box.style.transform="rotate("+(angle+90)+"deg)";
-			angle+=90;
-			console.log("turnRight:"+box.di);
+			box.style.transform = "rotate(" + (angle + 90) + "deg)";
+			angle += 90;
+			console.log("turnRight:" + box.di);
 		}
 		function turnBack() {
-			if (box.di==2) {
-				box.di=4;
+			if (box.di == 2) {
+				box.di = 4;
 			}
 			else {
-				box.di=parseInt((box.di+2)%4);
+				box.di = parseInt((box.di + 2) % 4);
 			}
-			box.style.transform="rotate("+(angle+180)+"deg)";
-			angle+=180;
-			console.log("turnBack:"+box.di);
+			box.style.transform = "rotate(" + (angle + 180) + "deg)";
+			angle += 180;
+			console.log("turnBack:" + box.di);
 		}
 		function goAhead() {
-			var box_top=box.style.top;
-			var box_left=box.style.left;
+			var box_top = box.style.top;
+			var box_left = box.style.left;
 			console.log(box_top);
 			console.log(box_left);
 			//规定方向 1：上， 2：右 ，3：下， 4：左。di属性储存方向值,方向控制go命令的走法
-			switch(box.di) {
+			switch (box.di) {
 				case 1:
-				box_top=="0px"?alert("出界"):box.style.top=(parseInt(box_top)-50)+"px";
-				break;
+					box_top == "0px" ? alert("出界") : box.style.top = (parseInt(box_top) - 50) + "px";
+					break;
 				case 2:
-				box_left=="450px"?alert("出界"):box.style.left=(parseInt(box_left)+50)+"px";
-				break;
+					box_left == "450px" ? alert("出界") : box.style.left = (parseInt(box_left) + 50) + "px";
+					break;
 				case 3:
-				box_top=="450px"?alert("出界"):box.style.top=(parseInt(box_top)+50)+"px";
-				break;
+					box_top == "450px" ? alert("出界") : box.style.top = (parseInt(box_top) + 50) + "px";
+					break;
 				case 4:
-				box_left=="0px"?alert("出界"):box.style.left=(parseInt(box_left)-50)+"px";
-				break;
+					box_left == "0px" ? alert("出界") : box.style.left = (parseInt(box_left) - 50) + "px";
+					break;
 			}
 			// console.log(box.di);
 		}
 		function judgeHow() {
-			var orderValue=order.value;
-			switch(orderValue) {
-				case "TUN LEF":turnLeft();
-				break;
-				case "TUN RIG":turnRight();
-				break;
-				case "TUN BAC":turnBack();
-				break;
-				case "GO":goAhead();
-				break;
-				default:alert("指令错误！");
+			var orderValue = order.value;
+			switch (orderValue) {
+				case "TUN LEF": turnLeft();
+					break;
+				case "TUN RIG": turnRight();
+					break;
+				case "TUN BAC": turnBack();
+					break;
+				case "GO": goAhead();
+					break;
+				default: alert("指令错误！");
 			}
 		}
 		function init() {
-			doit.onclick=judgeHow;
+			doit.onclick = judgeHow;
 		}
 		//生成网格
-		var n=0;
-		while(n<100) {
-			var grid=document.createElement("div");
-			grid.className="grid";
+		var n = 0;
+		while (n < 100) {
+			var grid = document.createElement("div");
+			grid.className = "grid";
 			grids.appendChild(grid);
 			n++;
 		}
 		// 快捷面板
 		function qiuckControl() {
-			var toUp=document.getElementById("toUp");
-			var toDown=document.getElementById("toDown");
-			var toGo=document.getElementById("toGo");
-			var toLeft=document.getElementById("toLeft");
-			var toRight=document.getElementById("toRight");
-			toUp.onclick=function() {
+			var toUp = document.getElementById("toUp");
+			var toDown = document.getElementById("toDown");
+			var toGo = document.getElementById("toGo");
+			var toLeft = document.getElementById("toLeft");
+			var toRight = document.getElementById("toRight");
+			toUp.onclick = function () {
 				turnBack();
-				order.value="TUN BAC";
+				order.value = "TUN BAC";
 			}
-			toDown.onclick=function() {
+			toDown.onclick = function () {
 				turnBack();
-				order.value="TUN BAC";
+				order.value = "TUN BAC";
 			}
-			toGo.onclick=function() {
+			toGo.onclick = function () {
 				goAhead();
-				order.value="GO";
+				order.value = "GO";
 			}
-			toLeft.onclick=function() {
+			toLeft.onclick = function () {
 				turnLeft();
-				order.value="TUN LEF";
+				order.value = "TUN LEF";
 			}
-			toRight.onclick=function() {
+			toRight.onclick = function () {
 				turnRight();
-				order.value="TUN RIG";
+				order.value = "TUN RIG";
 			}
 		}
 	</script>
 </body>
+
 </html>

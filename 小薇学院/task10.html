@@ -2,51 +2,51 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Flexbox</title>
+	<title>Flexbox布局练习</title>
 	<style>
-		* {
+		*{
 			margin: 0;
 			padding: 0;
 		}
 
-		.ct {
+		.ct{
 			padding: 25px;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
 		}
 
-		.ct>div {
+		.ct>div{
 			width: 150px;
 			margin-bottom: 10px;
 		}
 
-		.div-1 {
+		.div-1{
 			height: 120px;
 			border: 1px solid #f00;
 		}
 
-		.div-2 {
+		.div-2{
 			height: 100px;
 			border: 1px solid #f00;
 		}
 
-		.div-3 {
+		.div-3{
 			height: 40px;
 			border: 1px solid #f00;
 		}
 
-		.div-4 {
+		.div-4{
 			height: 200px;
 			border: 1px solid #0f0;
 		}
 
 		@media all and (max-width: 640px) {
-			.ct {
+			.ct{
 				align-items: flex-start;
 				flex-wrap: wrap;
 			}
-			.div-4 {
+			.div-4{
 				order: -1;
 			}
 		}

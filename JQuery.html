@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("p").click(function () {
+                $(this).hide();
+            });
+            $(".test").click(function () {
+                $(this).hide();
+            });
+            $("#test").click(function () {
+                $(this).hide();
+            });
+            $("button").click(function () {
+                $("p").css("background-color", "red");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p>点我我就消失</p>
+    <div id="test">我的id是test.</div>
+    <div class="test">我的class是test.</div>
+    <button type="button">段落变红</button>
+</body>
+
+</html>

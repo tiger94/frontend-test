@@ -30,6 +30,13 @@
                 $("#div2").fadeTo("slow", 0.4);
                 $("#div3").fadeTo("slow", 0.7);
             });
+            $("#donghua").click(function(){
+    var div=$("#div4");
+    div.animate({height:'300px',opacity:'0.4'},"slow");
+    div.animate({width:'300px',opacity:'0.8'},"slow");
+    div.animate({height:'100px',opacity:'0.4'},"slow");
+    div.animate({width:'100px',opacity:'0.8'},"slow");
+  });
         });
     </script>
 </head>
@@ -41,6 +48,7 @@
     <button id="red" type="button">段落变红</button>
     <button id="qiehuan" type="button">toggle</button>
     <button id="danchu">点击这里，使三个矩形淡出</button>
+    <button id="donghua">开始动画</button>
     <p>我是段落，双击点我我就消失</p>
     <div id="test">我的id是test.鼠标放上我就消失。</div>
     </br>
@@ -54,10 +62,11 @@
     <div class="qiehuan">消失或者出现交替进行。</div>
     </br>
     <div id="div1" style="width:80px;height:80px;background-color:red;"></div>
-    <br>
     <div id="div2" style="width:80px;height:80px;background-color:green;"></div>
-    <br>
     <div id="div3" style="width:80px;height:80px;background-color:blue;"></div>
+    <p>默认情况下，所有 HTML 元素的位置都是静态的，并且无法移动。如需对位置进行操作，记得首先把元素的 CSS position 属性设置为 relative、fixed 或 absolute。</p>
+<div id="div4" style="background:#98bf21;height:100px;width:100px;position:absolute;">
+</div>
 </body>
 
 </html>

@@ -14,7 +14,8 @@
                 $(this).hide(2000);
             });
             $("#red").click(function () {
-                $("p").css("background-color", "red");
+                $("p").css("background-color", "red")
+                    .slideUp(2000).slideDown(2000);
             });
             $("#hide").click(function () {
                 $("#p1").hide(1000);
@@ -30,22 +31,24 @@
                 $("#div2").fadeTo("slow", 0.4);
                 $("#div3").fadeTo("slow", 0.7);
             });
-            $("#donghua").click(function(){
-    var div=$("#div4");
-    div.animate({height:'300px',opacity:'0.4'},"slow");
-    div.animate({width:'300px',opacity:'0.8'},"slow");
-    div.animate({height:'100px',opacity:'0.4'},"slow");
-    div.animate({width:'100px',opacity:'0.8'},"slow");
-  });
-  $("#donghua2").click(function(){
-    var div=$("#div5");  
-    div.animate({left:'100px'},"slow");
-    div.animate({fontSize:'5em'},"slow");
-  });
+            $("#donghua").click(function () {
+                var div = $("#div4");
+                div.animate({ height: '300px', opacity: '0.4' }, "slow");
+                div.animate({ width: '300px', opacity: '0.8' }, "slow");
+                div.animate({ height: '100px', opacity: '0.4' }, "slow");
+                div.animate({ width: '100px', opacity: '0.8' }, "slow");
+            });
+            $("#donghua2").click(function () {
+                var div = $("#div5");
+                div.animate({ left: '100px' }, "slow");
+                div.animate({ fontSize: '5em' }, "slow");
+            });
         });
     </script>
     <style>
-    .div-inline{ display:inline} 
+        .div-inline {
+            display: inline
+        }
     </style>
 </head>
 
@@ -69,15 +72,16 @@
         如果存在名称冲突，则重命名 jQuery 库:var jq=jQuery.noConflict()，帮助您使用自己的名称（比如 jq）来代替 $ 符号</div>
     </br>
     <div class="div-inline">
-    <div class="qiehuan">消失或者出现交替进行。
-    <div id="div1" style="width:80px;height:80px;background-color:red;"></div>
-    <div id="div2" style="width:80px;height:80px;background-color:green;"></div>
-    <div id="div3" style="width:80px;height:80px;background-color:blue;"></div>
-</div></div>
+        <div class="qiehuan">消失或者出现交替进行。
+            <div id="div1" style="width:80px;height:80px;background-color:red;"></div>
+            <div id="div2" style="width:80px;height:80px;background-color:green;"></div>
+            <div id="div3" style="width:80px;height:80px;background-color:blue;"></div>
+        </div>
+    </div>
     <p>默认情况下，所有 HTML 元素的位置都是静态的，并且无法移动。如需对位置进行操作，记得首先把元素的 CSS position 属性设置为 relative、fixed 或 absolute。</p>
-<div id="div4" class="div-inline" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
-<div id="div5" class="div-inline" style="margin-left:120px;background:#98bf21;height:100px;width:200px;position:absolute;">HELLO</div>
-</div>
+    <div id="div4" class="div-inline" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+    <div id="div5" class="div-inline" style="margin-left:120px;background:#98bf21;height:100px;width:200px;position:absolute;">HELLO</div>
+    </div>
 </body>
 
 </html>
